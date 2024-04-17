@@ -169,9 +169,10 @@ sup {
 }
 .slide--2__content {
   display: flex;
+  justify-content: space-between;
 }
 .slide--2__block {
-  width: 33.33%;
+  width: 32%;
 }
 .slide--2__block .icon {
   display: flex;
@@ -1190,15 +1191,6 @@ sup {
   height: 95em;
   margin: 6em auto 0;
 }
-.slide--12__bottle-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  display: none;
-}
 /*#endregion slide12*/
 
 /*#region slide13*/
@@ -2197,9 +2189,6 @@ sup {
   .arrow {
     width: 8em;
     height: 8em;
-  }
-  .slide--15__bottle {
-    top: 12em;
   }
 }
 
