@@ -228,7 +228,6 @@ sup {
 /*#region slide3*/
 .slide--3 {
   height: 100vh;
-  max-height: -webkit-fill-available;
   background-image: url(../images/slide--3-bg.png);
   background-position: center;
   background-repeat: no-repeat;
