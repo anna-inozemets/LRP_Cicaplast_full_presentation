@@ -225,9 +225,9 @@ const slideActions = {
     nextArrowDelay = 3.5;
   },
   19: () => {
-    lastSlideActionTimeout = setTimeout(() => {
-      lastSlideAction();
-    }, 5 * 1000);
+    // lastSlideActionTimeout = setTimeout(() => {
+    //   lastSlideAction();
+    // }, 5 * 1000);
   },
 }
 // function that add animation for element

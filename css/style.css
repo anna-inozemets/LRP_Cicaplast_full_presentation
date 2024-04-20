@@ -1979,7 +1979,7 @@ sup {
   font-size: 6em;
   font-weight: 700;
   color: var(--blue-background-c);
-  width: 12.6em;
+  width: 14.3em;
   margin: 0 auto;
 }
 .slide--19__right {
@@ -2061,10 +2061,11 @@ sup {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 98.5vw;
+  width: 99.7vw;
   z-index: 10;
 }
 .arrow {
+  padding: 2em;
   width: 10em;
   height: 19em;
   transform: scale(1);
@@ -2074,16 +2075,16 @@ sup {
   transform: scale(0);
 }
 .arrow:first-child {
-  padding: 2em 2em 2em 0;
+  padding-left: 0.5em;
   transform-origin: left center;
 }
 .arrow:last-child {
-  padding: 2em 0 2em 2em;
+  padding-right: 0.5em;
   transform-origin: right center;
 }
 .arrow.arrow--more-left {
   position: relative;
-  left: -2.7em;
+  left: -2.9em;
 }
 .arrow svg {
   width: 100%;
