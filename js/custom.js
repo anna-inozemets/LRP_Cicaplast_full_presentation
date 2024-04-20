@@ -7,11 +7,12 @@ const prevSlideButton = document.querySelector('.arrow--prev');
 
 // additional variables for timeout Ids
 let nextButtonTimeout;
+let prevButtonTimeout;
 let lastSlideActionTimeout;
 
 // additional variables for arrows
 const hiddenArrowClass = 'hidden';
-let nextArrowDelay = 0;
+let nextArrowDelay = 1;
 
 // additional varibles for slides
 const totalSlideAmount = 19;
@@ -252,12 +253,16 @@ async function loadComponent(componentPathName, slideNum) {
 // function that update info about prev/next button
 function updateNavigationButtons(currentSlide) {
   clearTimeout(nextButtonTimeout);
+  clearTimeout(prevButtonTimeout);
   $(nextSlideButton).addClass(hiddenArrowClass);
+  $(prevSlideButton).addClass(hiddenArrowClass);
 
   if (currentSlide === 0 || currentSlide === 1) {
     $(prevSlideButton).addClass(hiddenArrowClass);
   } else {
-    $(prevSlideButton).removeClass(hiddenArrowClass);
+    prevButtonTimeout = setTimeout(() => {
+      $(prevSlideButton).removeClass(hiddenArrowClass);
+    }, nextArrowDelay * 1000);
   }
 
   if (currentSlide === 0 || currentSlide === totalSlideAmount) {
@@ -265,6 +270,7 @@ function updateNavigationButtons(currentSlide) {
   } else {
     nextButtonTimeout = setTimeout(() => {
       $(nextSlideButton).removeClass(hiddenArrowClass);
+      $(prevSlideButton).removeClass(hiddenArrowClass);
     }, nextArrowDelay * 1000);
   }
 }
