@@ -151,15 +151,14 @@ const slideActions = {
     nextArrowDelay = 5;
   },
   8: () => {
-    $(nextSlideButton).addClass('arrow--white');
     $(nextSlideButton).removeClass('arrow--more-left');
+    $(nextSlideButton).removeClass('arrow--white');
     gsap.from('.slide--8__right .up-wrapper .text', { opacity: 0, duration: 0.75, delay: 1 });
     gsap.from('.slide--8__right .up-wrapper .number-wrapper', { opacity: 0, duration: 0.75, delay: 1 });
     gsap.from('.slide--8__right .up-wrapper .conclude', { opacity: 0, duration: 0.75, delay: 1 });
     nextArrowDelay = 2;
   },
   9: () => {
-    $(nextSlideButton).removeClass('arrow--white');
     animateNumber(1);
     nextArrowDelay = 3.5;
   },
@@ -225,9 +224,9 @@ const slideActions = {
     nextArrowDelay = 3.5;
   },
   19: () => {
-    // lastSlideActionTimeout = setTimeout(() => {
-    //   lastSlideAction();
-    // }, 5 * 1000);
+    lastSlideActionTimeout = setTimeout(() => {
+      lastSlideAction();
+    }, 5 * 1000);
   },
 }
 // function that add animation for element
